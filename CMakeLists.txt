@@ -3,7 +3,7 @@ project(pathfinder)
 
 file(GLOB_RECURSE pathfinder_SOURCES src/*.cpp)
 set_source_files_properties(${pathfinder_SOURCES} PROPERTIES LANGUAGE CXX)
-add_library(pathfinder ${pathfinder_SOURCES})
+add_library(pathfinder SHARED ${pathfinder_SOURCES})
 target_include_directories(pathfinder PUBLIC include)
 
 function(pathfinder_example name)
