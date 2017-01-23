@@ -1,6 +1,5 @@
-#include "../pathfinder.h"
-
 #include <stdlib.h>
+#include <pathfinder.h>
 
 int pathfinder_prepare(Waypoint *path, int path_length, void (*fit)(Waypoint,Waypoint,Spline*), int sample_count, double dt,
         double max_velocity, double max_acceleration, double max_jerk, TrajectoryCandidate *cand) {

@@ -1,6 +1,6 @@
 #include <pathfinder.h>
 
-int main() {
+int main(int argc, wchar_t* argv[]) {
     int POINT_LENGTH = 3;
 
     Waypoint *points = (Waypoint*)malloc(sizeof(Waypoint) * POINT_LENGTH);
@@ -20,14 +20,7 @@ int main() {
     
     pathfinder_generate(&candidate, trajectory);
     
-    Segment *leftTrajectory = (Segment*)malloc(sizeof(Segment) * length);
-    Segment *rightTrajectory = (Segment*)malloc(sizeof(Segment) * length);
-    
-    double wheelbase_width = 0.6;
-
-    pathfinder_modify_tank(trajectory, length, leftTrajectory, rightTrajectory, wheelbase_width);
-
-    // Do something with the trajectories...
+    // Do something with the trajectory...
     
     free(trajectory);
     return 0;

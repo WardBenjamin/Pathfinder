@@ -1,6 +1,6 @@
 #include <pathfinder.h>
 
-int main() {
+int main(int argc, char* argv[]) {
     int POINT_LENGTH = 3;
 
     Waypoint* points = (Waypoint*)malloc(sizeof(Waypoint) * POINT_LENGTH);
