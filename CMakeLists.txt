@@ -1,7 +1,7 @@
 cmake_minimum_required(VERSION 3.2)
 project(pathfinder)
 
-file(GLOB_RECURSE pathfinder_SOURCES src.c)
+file(GLOB_RECURSE pathfinder_SOURCES src/*.c)
 set_source_files_properties(${pathfinder_SOURCES} PROPERTIES LANGUAGE CXX)
 add_library(pathfinder ${pathfinder_SOURCES})
 target_include_directories(pathfinder PUBLIC include)
