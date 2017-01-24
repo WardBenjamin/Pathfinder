@@ -16,13 +16,13 @@ int main(int argc, char* argv[]) {
     pathfinder_prepare(points, POINT_LENGTH, FIT_HERMITE_CUBIC, PATHFINDER_SAMPLES_HIGH, 0.001, 15.0, 10.0, 60.0, &candidate);
 
     int length = candidate.length;
-    Segment *trajectory = malloc(length * sizeof(Segment));
+    Segment *trajectory = (Segment*)malloc(length * sizeof(Segment));
     
     pathfinder_generate(&candidate, trajectory);
     
     Segment *frontLeft = (Segment *)malloc(length * sizeof(Segment));
     Segment *frontRight = (Segment *)malloc(length * sizeof(Segment));
-    Segment *backLeft = (Segment *)malloc(length * sizeof(Segment);
+    Segment *backLeft = (Segment *)malloc(length * sizeof(Segment));
     Segment *backRight = (Segment *)malloc(length * sizeof(Segment));
     
     double wheelbase_width = 0.6;

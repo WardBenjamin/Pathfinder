@@ -16,7 +16,7 @@ int main(int argc, char* argv[]) {
     pathfinder_prepare(points, POINT_LENGTH, FIT_HERMITE_CUBIC, PATHFINDER_SAMPLES_HIGH, 0.001, 15.0, 10.0, 60.0, &candidate);
 
     int length = candidate.length;
-    Segment *trajectory = malloc(length * sizeof(Segment));
+    Segment *trajectory = (Segment*)malloc(length * sizeof(Segment));
     
     pathfinder_generate(&candidate, trajectory);
     
