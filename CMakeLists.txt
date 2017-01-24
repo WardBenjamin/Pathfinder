@@ -1,5 +1,7 @@
 cmake_minimum_required(VERSION 3.2)
 project(pathfinder)
+set(CMAKE_CXX_STANDARD 11)
+set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -Wall -Wno-unused-parameter -pedantic -fPIC -std=c++1y")
 
 file(GLOB_RECURSE pathfinder_SOURCES src/*.cpp)
 set_source_files_properties(${pathfinder_SOURCES} PROPERTIES LANGUAGE CXX)
